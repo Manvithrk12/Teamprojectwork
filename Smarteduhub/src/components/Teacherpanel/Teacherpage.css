@@ -1,27 +1,29 @@
-.sidebar-container {
+.teacher-sidebar-container {
   display: flex;
   height: 100vh;
 }
 
 /* Sidebar */
-.sidebar {
+.teacher-sidebar {
   width: 300px;
   height: 100vh;
   background-color: #c4e3ff7a;
+  color: black;
   padding: 20px;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: width 0.3s ease-in-out;
 }
 
 /* Sidebar Closed */
-.sidebar.closed {
+.teacher-sidebar.closed {
   width: 80px;
 }
 
 /* Toggle Button */
-.toggle-btn {
+.teacher-toggle-btn {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -31,13 +33,13 @@
 }
 
 /* Logo */
-.logo {
+.teacher-logo {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.logo-img {
+.teacher-logo-img {
   width: 250px;
   height: 120px;
   transition: opacity 0.3s ease-in-out;
@@ -48,19 +50,20 @@
   display: none;
 }
 
-/* Admin Panel Logo */
-.admin-logo {
+/* Panel Logo */
+.teacher-panel-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 10px;
 }
 
-.admin-logo img {
+.teacher-panel-logo img {
   width: 60px;
+  height: 60px;
 }
 
-.admin-text {
+.teacher-panel-text {
   color: #094175;
   margin-top: 5px;
   font-size: 16px;
@@ -68,14 +71,14 @@
 }
 
 /* Menu */
-.menu {
+.teacher-menu {
   margin-top: 30px;
   list-style: none;
   width: 100%;
   padding: 0;
 }
 
-.menu-item {
+.teacher-menu-item {
   display: flex;
   align-items: center;
   padding: 12px;
@@ -85,16 +88,15 @@
   background: none;
 }
 
-.menu-item:hover {
+.teacher-menu-item:hover {
   background: #b9fff2;
 }
 
-.menu-item.active {
+.teacher-menu-item.active {
   background: #92d7ff;
 }
 
-/* Make sure icon is always visible */
-.menu-link {
+.teacher-menu-link {
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -102,85 +104,100 @@
   width: 100%;
 }
 
-.icon {
+.teacher-icon {
   font-size: 20px;
   margin-right: 10px;
   color: rgb(13, 18, 31);
 }
 
-/* Logout */
-.logout {
+/* Bottom Menu */
+.teacher-bottom-menu {
   margin-top: auto;
   width: 80%;
   text-align: center;
+  padding-bottom: 1rem;
 }
 
-.logout-btn {
-  width: 100%;
-  padding: 12px;
-  color: rgb(0, 0, 0);
+/* Profile & Logout */
+.teacher-profile-link,
+.teacher-logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
   background: rgb(105, 210, 248);
   border: none;
-  font-size: 16px;
   cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
   border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  transition: background 0.3s;
 }
 
-.logout-btn:hover {
+.teacher-profile-link:hover,
+.teacher-logout-btn:hover {
   background: rgb(93, 188, 255);
 }
 
+
 /* Responsive Design */
 @media (max-width: 768px) {
-  .sidebar {
+  .teacher-sidebar {
     width: 80px;
     padding: 10px;
   }
 
-  .logo-img, .admin-text, .menu-text {
+  .teacher-logo-img,
+  .teacher-panel-text {
     display: none;
   }
 
-  .admin-logo img {
+  .teacher-panel-logo img {
     width: 40px;
+    height: 40px;
   }
 
-  .toggle-btn {
+  .teacher-toggle-btn {
     font-size: 18px;
     top: 10px;
     right: 10px;
   }
 
-  .menu {
+  .teacher-menu {
     margin-top: 20px;
   }
 
-  .menu-item {
+  .teacher-menu-item {
     justify-content: center;
     padding: 10px;
   }
 
-  .logout-btn {
+  .teacher-icon {
+    font-size: 18px;
+  }
+
+  .teacher-profile-link,
+  .teacher-logout-btn {
     width: 60px;
     font-size: 14px;
+    padding: 8px;
   }
 }
 
 @media (max-width: 480px) {
-  .sidebar {
+  .teacher-sidebar {
     width: 80px;
   }
 
-  .icon {
-    font-size: 18px;
+  .teacher-icon {
+    font-size: 16px;
   }
 
-  .toggle-btn {
+  .teacher-toggle-btn {
     font-size: 16px;
   }
 }
+
 
   
