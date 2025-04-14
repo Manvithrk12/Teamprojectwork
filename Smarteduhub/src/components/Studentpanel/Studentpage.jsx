@@ -4,9 +4,9 @@ import { FiLogOut } from "react-icons/fi";
 import { Link, useLocation } from "react-router-dom";
 import "./Studentpage.css";
 import Edulogo from "../../assets/Smarteduhub.png";
-// import StudentLogo from "../../assets/studentlogo.png"; // replace with actual student logo
+import Studentlogo from "../../assets/studentlogo.png";
 
-const StudentSidebar = () => {
+const Studentpage = () => {
   const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
 
@@ -35,7 +35,7 @@ const StudentSidebar = () => {
 
         {/* Student Panel Logo */}
         <div className="student-panel-logo">
-          <img src={StudentLogo} alt="Student" className={isOpen ? "" : "hidden"} />
+          <img src={Studentlogo} alt="Student" className={isOpen ? "" : "hidden"} />
           <h3 className={`student-panel-text ${isOpen ? "" : "hidden"}`}>Student Panel</h3>
         </div>
 
@@ -67,4 +67,6 @@ const StudentSidebar = () => {
   );
 };
 
-export default StudentSidebar;
+export default Studentpage;
+
+
